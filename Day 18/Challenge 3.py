@@ -17,7 +17,7 @@ def draw_shapes():
             coñito.forward(100)
             print((coñito.pos()*-1))
             pos_final = [round(coñito.pos()[0]), round(coñito.pos()[1])]
-        coñito.right(angel)
+        #coñito.right(angel)
 
 draw_shapes()
 screen = Screen()

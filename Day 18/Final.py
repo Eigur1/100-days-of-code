@@ -5,7 +5,7 @@ from math import (sqrt)
 
 
 def generate_color_list(number_colors):
-    colors = cg.extract('reference.jpg', number_colors)
+    colors = cg.extract("reference1.jpg", number_colors)
     color_list = []
     for i in range(0, len(colors) - 1):
         actualcolor = colors[i]
@@ -49,6 +49,6 @@ def create_painting(num_of_dots, radius):
     screen.exitonclick()
 
 
-create_painting(200, 10)
+create_painting(69, 20)
 
 generate_color_list(20)
