@@ -29,17 +29,19 @@ def collision_with_food():
         return True
 
 
-score = 0
-game_state = True
-while game_state:
+local_score = 0
+
+while True:
     snake.move()
     snake.check_collision_wall()
     if collision_with_food():
         food.generate_food()
         snake.snake_extend()
-        score += 1
-    scoreboard.draw_scoreboard(score)
-    game_state = snake.detect_tail_collision()
+        local_score += 1
+    scoreboard.draw_scoreboard(local_score)
+    if not snake.detect_tail_collision():
+        scoreboard.game_over_he(local_score)
+        snake.snake_reset()
+        local_score = 0 
     screen.update()
 
-print("Game over me cago en la reputisima hostia lets GO.")
